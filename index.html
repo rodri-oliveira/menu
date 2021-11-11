@@ -1,26 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Menu</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            background-color: #fff;
+        }
+
+        .cabecalho {
+            background: #333;
+            border-bottom: solid 5px #4faddb;
+            height: 80px;
+            box-sizing: content-box;
+            /*o box fica do tamnho do conteudo*/
+        }
+
+        .logo {
+            display: inline-block;
+            height: 80px;
+            padding: 10px;
+            background-color: #222;
+        }
+
+        .logo img {
+            height: 100%;
+            /*a logo ocupa 100%*/
+        }
+
+        .menu-toggle {
+            float: right;
+            color: #eee;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+
+        .menu {
+            display: inline-block;
+            vertical-align: top;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .cabecalho a {
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.5em;
+        }
+
+        .menu a {
+            padding: 15px;
+        }
+
+        .autenticacao {
+            float: right;
+            height: 80px;
+            padding: 23px;
+        }
+
+        .menu a:hover,
+        .menu a.selected {
+            background-color: #4faddb;
+            color: #000;
+        }
+
+        .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+        }
+
+        .registrar {
+            background-color: #f50a31;
+            color: #fff
+        }
     </style>
 </head>
+
 <body>
     <header class="cabecalho">
         <div class="logo">
             <a href="#inicio">
-                <img src="./img/Sant Consig Logotipo1.png" alt="logo">
+                <img src="./img/Sant Consig Logotipo2.png" alt="logo">
             </a>
         </div>
         <button class="menu-toggle">
             <i class="fa fa-lg fa-bars"></i>
         </button>
-        <nav>
-            <ul class="menu">
+        <nav class="menu">
+            <ul>
                 <li>
                     <a href="#inicio">Inicio</a>
                 </li>
@@ -42,7 +132,8 @@
     </header>
 
     <script>
-        
+
     </script>
 </body>
+
 </html>
