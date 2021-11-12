@@ -96,7 +96,26 @@
             background-color: #f50a31;
             color: #fff
         }
+
         /* iniciando media query */
+
+        @media(min-width: 679px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 580px) {
+            .menu {
+                display: none;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .autenticacao {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -133,7 +152,15 @@
     </header>
 
     <script>
-
+        window.onhashchange = (e) => {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            console.log(oldURL, newURL)
+            const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldLink && oldLink.classList.remove('selected')
+            newLink && newLink.classList.add('selected')
+        }
     </script>
 </body>
 
